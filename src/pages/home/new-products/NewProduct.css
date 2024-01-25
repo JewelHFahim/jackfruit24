@@ -1,0 +1,41 @@
+.productcard {
+  position: relative;
+}
+
+.addTocartBtn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 70px;
+  background-color: black;
+  /* translate: 0 50px; */
+}
+
+/* .productcard:hover  */
+
+.productcard:hover .addTocartBtn {
+  translate: 0 70px;
+  transition: all 0.5s ease-in-out;
+}
+
+.cartIcon {
+  display: none;
+}
+
+.addTocartBtn:hover .cartIcon {
+  display: block;
+  transition: all 0.05s ease-in-out;
+}
+
+.heartBtn {
+  position: absolute;
+  translate: 0px -35px;
+  display: none;
+
+}
+
+.heartConta:hover .heartBtn {
+  display: block;
+}
