@@ -3,6 +3,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "./MainSlider.css"
 
 export default function MainSlider() {
   return (
@@ -19,11 +20,11 @@ export default function MainSlider() {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        className="main-slider"
       >
         {[1, 2, 3, 4, 5, 6].map((item, i) => (
           <SwiperSlide key={i}>
-            <img src="https://onion24.com/img/banner3.jpg" alt="" className="w-full"/>
+            <img src="https://onion24.com/img/banner3.jpg" alt="" className="w-full h-[150px] object-cover lg:h-full"/>
           </SwiperSlide>
         ))}
       </Swiper>

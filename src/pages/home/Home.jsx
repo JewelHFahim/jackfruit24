@@ -1,5 +1,5 @@
 import Category from "../../components/category/Category";
-import MainSlider from "../../components/sliders/main-slider/MainSlider";
+import MainSlider from "../../components/sliders/main-slider/main-slider/MainSlider";
 import HotDeal from "./hot-deal/HotDeal";
 import NewProducts from "./new-products/NewProducts";
 import NewsLetter from "./news-letter/NewsLetter";
@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className="bg-Secondary">
       <div className="px-10">
-        <div className="bg-white rounded-2xl pb-4 shadow-lg shadow-slate-600">
+        <div className="bg-white rounded-xl pb-4 shadow-lg shadow-slate-600 p-2">
           <MainSlider />
           <Category />
           <NewProducts />

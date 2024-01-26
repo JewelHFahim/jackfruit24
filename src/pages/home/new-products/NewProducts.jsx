@@ -14,8 +14,9 @@ const NewProducts = () => {
     "hover:text-red-700 hover:underline transition-all duration-200";
 
   return (
-    <div className="w-[1150px] mx-auto my-10">
-      <div className="flex items-center justify-between">
+    <div className="lg:w-[1150px] mx-auto my-10">
+
+      <div className="flex flex-col lg:flex-row items-center justify-between">
         <h1 className="text-[28px] font-bold uppercase">New Products</h1>
 
         <div>
@@ -44,17 +45,12 @@ const NewProducts = () => {
         </div>
       </div>
 
-      <div className="my-5 bg-gradient-to-b from-slate-100 to-[#cbd7fe] rounded-xl p-5 shadow-xl shadow-gray-400">
-        <div className="grid grid-cols-1 lg:grid-cols-4">
-          {[1, 2, 3, 4].map((item, i) => (
-            <NewPCard key={i} />
-          ))}
-        </div>
-
-        {/* <Swiper
+      <div className="my-5 bg-gradient-to-b from-slate-100 to-[#cbd7fe] rounded-xl lg:px-5 shadow-xl shadow-gray-400 z-[0]">
+        <Swiper
           spaceBetween={30}
           slidesPerView={4}
           centeredSlides={true}
+          grabCursor={true}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
@@ -63,7 +59,8 @@ const NewProducts = () => {
           pagination={false}
           navigation={false}
           modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper"
+          className="newProductSlider pt-8 pb-10 lg:pt-[50px] lg:pb-[70px]"
+         
         >
           {Array.from({ length: 9 }).map((item, i) => (
             <SwiperSlide key={i}>
@@ -72,8 +69,9 @@ const NewProducts = () => {
               </div>
             </SwiperSlide>
           ))}
-        </Swiper> */}
+        </Swiper>
       </div>
+
     </div>
   );
 };
@@ -81,8 +79,7 @@ const NewProducts = () => {
 export default NewProducts;
 
 const NewPCard = () => {
-  const actionBtnStyle =
-    "w-[35px] h-[35px] rounded-full flex justify-center items-center hover:bg-slate-200 hover:text-red-600 transition-all duration-200";
+  const actionBtnStyle = "w-[35px] h-[35px] rounded-full flex justify-center items-center hover:bg-slate-200 hover:text-red-600 transition-all duration-200";
 
   return (
     <div className="w-[260px] h-[380px] bg-white flex flex-col productcard hover:border-[3px] border-transparent hover:border-red-600 shadow-md">
@@ -148,9 +145,7 @@ const NewPCard = () => {
 
       <div className="addTocartBtn flex justify-center items-center">
         <button className="text-white px-7 py-[7px] rounded-[30px] bg-red-700 uppercase font-medium flex justify-center items-center gap-2 hover:bg-white hover:border-red-600 border-2 border-transparent hover:text-red-600 transition-all duration-200">
-          <div className="cartIcon">
-            <CgShoppingCart />
-          </div>
+          <div className="cartIcon"> <CgShoppingCart /> </div>
           <p>Add To Cart</p>
         </button>
       </div>

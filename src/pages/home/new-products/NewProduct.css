@@ -10,10 +10,9 @@
   width: 100%;
   height: 70px;
   background-color: black;
-  /* translate: 0 50px; */
+  /* translate: 0 70px; */
 }
 
-/* .productcard:hover  */
 
 .productcard:hover .addTocartBtn {
   translate: 0 70px;

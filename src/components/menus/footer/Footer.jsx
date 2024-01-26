@@ -5,8 +5,8 @@ import { FaCcPaypal } from "react-icons/fa";
 import { FaCcMastercard } from "react-icons/fa";
 import { FaCcDiscover } from "react-icons/fa";
 import { SiAmericanexpress } from "react-icons/si";
-
-
+import { IoCallSharp } from "react-icons/io5";
+import { IoMdMail } from "react-icons/io";
 
 
 
@@ -20,38 +20,34 @@ const Footer = () => {
             About Us
           </h1>
           <div className="mt-2 flex flex-col gap-y-3 text-slate-700">
-            <p>
-              {" "}
+            <p className="leading-[20px]">
               We are a creative team in the world. Our main goal is customer
-              satisfaction.{" "}
+              satisfaction.
             </p>
             <div className="flex items-center gap-x-1 text-sm font-medium">
-              {" "}
-              <FaLocationDot className="text-red-600" /> <p>USA</p>{" "}
+              <FaLocationDot className="text-red-600" /> <p>USA</p>
             </div>
             <div className="flex items-center gap-x-1 text-sm font-medium">
-              {" "}
-              <FaLocationDot className="text-red-600" /> <p>+880 1911209322</p>{" "}
+              <IoCallSharp className="text-red-600" /> <p>+880 1911209322</p>
             </div>
             <div className="flex items-center gap-x-1 text-sm font-medium">
-              {" "}
-              <FaLocationDot className="text-red-600" /> <p>info@gmail.com</p>{" "}
+              <IoMdMail className="text-red-600" /> <p>info@gmail.com</p>
             </div>
           </div>
         </div>
 
         <div className="w-[400px]">
           <div className="flex justify-center items-center gap-x-2">
-            <FaCcVisa  className="text-[40px]"/>
-            <FaRegCreditCard  className="text-[40px]"/>
-            <FaCcPaypal  className="text-[40px]"/>
-            <FaCcMastercard  className="text-[40px]"/>
-            <FaCcDiscover  className="text-[40px]"/>
-            <SiAmericanexpress  className="text-[40px]"/>
+            <FaCcVisa className="text-[40px]" />
+            <FaRegCreditCard className="text-[40px]" />
+            <FaCcPaypal className="text-[40px]" />
+            <FaCcMastercard className="text-[40px]" />
+            <FaCcDiscover className="text-[40px]" />
+            <SiAmericanexpress className="text-[40px]" />
           </div>
           <p className="text-xs mt-8">
             Copyright ©2024 All rights reserved | This Site is made with by
-            onion24
+            jackfruit24
           </p>
         </div>
 
