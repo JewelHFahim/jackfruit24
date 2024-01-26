@@ -45,7 +45,7 @@ const NewProducts = () => {
       </div>
 
       <div className="my-5 bg-gradient-to-b from-slate-100 to-[#cbd7fe] rounded-xl p-5 shadow-xl shadow-gray-400">
-        <div className="grid grid-cols-4">
+        <div className="grid grid-cols-1 lg:grid-cols-4">
           {[1, 2, 3, 4].map((item, i) => (
             <NewPCard key={i} />
           ))}
@@ -156,10 +156,10 @@ const NewPCard = () => {
       </div>
 
       <div className="absolute top-4 right-4 flex items-center gap-2">
-        <div className="w-[50px] border-2 border-red-600 flex justify-center items-center text-sm text-red-600 font-semibold">
+        <div className="w-[50px] border-2 border-red-600 flex justify-center items-center text-xs text-red-600 font-semibold">
           -30%
         </div>
-        <div className="w-[50px] border-2 border-red-600 flex justify-center items-center bg-red-600 text-white uppercase text-sm">
+        <div className="w-[50px] border-2 border-red-600 flex justify-center items-center bg-red-600 text-white uppercase text-xs">
           New
         </div>
       </div>

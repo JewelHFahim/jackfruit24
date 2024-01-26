@@ -1,0 +1,12 @@
+.accountSetting{
+
+}
+
+.accountCont{
+    display: none;
+}
+
+.accountSetting:hover .accountCont{
+    display: block;
+    transition: all .3s ease-in-out;
+}
