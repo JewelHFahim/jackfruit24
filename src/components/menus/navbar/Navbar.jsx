@@ -23,7 +23,7 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search Here"
-            className="w-[250px] lg:w-[360px] py-1 lg:py-2 rounded-s-[20px] focus:outline-none px-4 text-sm lg:text-[16px]"
+            className="w-[250px] lg:w-[360px] py-2 rounded-s-[20px] focus:outline-none px-4 text-sm lg:text-[16px]"
           />
           <button className=" px-2 text-sm lg:text-[16px] lg:px-4 rounded-e-[20px] text-white bg-blue-500">
             Search

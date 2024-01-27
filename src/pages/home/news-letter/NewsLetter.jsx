@@ -5,7 +5,7 @@ import { FiMail } from "react-icons/fi";
 
 const NewsLetter = () => {
   return (
-    <div className="flex justify-center items-center p-5 py-14">
+    <div className="flex justify-center items-center p-5 py-9 lg:py-14">
 
       <div className="relative flex">
 
@@ -20,9 +20,9 @@ const NewsLetter = () => {
             <input
               type="text"
               placeholder="Enter Your Email"
-              className="w-[380px] py-[7px] rounded-s-[20px] px-5"
+              className=" lg:w-[380px] py-[7px] rounded-s-[20px] px-5"
             />
-            <button className="w-[150px] rounded-e-[20px] bg-gradient-to-b from-blue-700 to-blue-500 py-[7px] font-smibold text-white font-bold flex items-center justify-center gap-x-1">
+            <button className="w-[110px] lg:w-[150px] rounded-e-[20px] bg-gradient-to-b from-blue-700 to-blue-500 py-[7px] lg:font-smibold text-white :text-[16px] flex items-center justify-center gap-x-1">
               <IoIosMail className="text-lg" />
               Subscribe
             </button>

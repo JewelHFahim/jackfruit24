@@ -8,7 +8,7 @@ import TopSelling from "./top-selling/TopSelling";
 const Home = () => {
   return (
     <div className="bg-Secondary">
-      <div className="px-10">
+      <div className="px-6 lg:px-10">
         <div className="bg-white rounded-xl pb-4 shadow-lg shadow-slate-600 p-2">
           <MainSlider />
           <Category />
@@ -18,7 +18,7 @@ const Home = () => {
         </div>
       </div>
 
-      <hr className="my-10 border-[1.5px]" />
+      <hr className="mt-5 lg:mt-0 lg:my-10 border-[1.5px]" />
 
       <NewsLetter />
     </div>

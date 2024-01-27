@@ -8,8 +8,8 @@ const TopSelling = () => {
   const catStyle =
     "hover:text-red-700 hover:underline transition-all duration-200";
   return (
-    <div className="w-[1150px] mx-auto my-10">
-      <div className="flex items-center justify-between mb-2">
+    <div className=" lg:w-[1150px] mx-auto my-10">
+      <div className="flex flex-col lg:flex-row items-center justify-between mb-2">
         <h1 className="text-[28px] font-bold uppercase">Top Selling</h1>
 
         <div>
@@ -40,9 +40,9 @@ const TopSelling = () => {
 
       <hr />
 
-      <div className="mt-12 flex justify-between">
+      <div className="mt-6 lg:mt-12 flex flex-col gap-y-5 lg:flex-row justify-between">
 
-        <div className="w-[350px]">
+        <div className="w-[350px] border-b lg:border-b-0">
           <h2 className="uppercase font-bold text-[18px]">Top Selling</h2>
           <div className="mt-4">
             <Swiper
@@ -82,7 +82,7 @@ const TopSelling = () => {
           </div>
         </div>
 
-        <div className="w-[350px]">
+        <div className="w-[350px] border-b lg:border-b-0">
           <h2 className="uppercase font-bold text-[18px]">Top Selling</h2>
           <div className="mt-4">
             <Swiper
@@ -122,7 +122,7 @@ const TopSelling = () => {
           </div>
         </div>
 
-        <div className="w-[350px]">
+        <div className="w-[350px] ">
           <h2 className="uppercase font-bold text-[18px]">Top Selling</h2>
           <div className="mt-4">
             <Swiper
@@ -163,6 +163,8 @@ const TopSelling = () => {
         </div>
 
       </div>
+
+
     </div>
   );
 };
