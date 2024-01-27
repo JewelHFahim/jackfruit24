@@ -7,8 +7,10 @@ const ClientLayout = () => {
   return (
     <div>
       <NavCombine />
-       <div className="hidden lg:block"><CategoryMenu /></div>
-     <Outlet />
+      <div className="hidden lg:block">
+        <CategoryMenu />
+      </div>
+      <Outlet />
       <Footer />
     </div>
   );
