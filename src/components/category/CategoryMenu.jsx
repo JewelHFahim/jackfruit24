@@ -11,7 +11,7 @@ const CategoryMenu = () => {
           </a>
         </li>
         <li>
-          <a href="" className={catStyle}>
+          <a href="/products" className={catStyle}>
             Womens
           </a>
         </li>
