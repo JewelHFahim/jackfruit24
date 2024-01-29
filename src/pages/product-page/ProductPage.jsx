@@ -1,6 +1,9 @@
 import { TfiLayoutGrid3Alt } from "react-icons/tfi";
 import { FaThList } from "react-icons/fa";
 import ProductCard from "../../components/product-card/ProductCard";
+import PriceRangeSlider from "../../components/sliders/range-slider/RangeSlider";
+import Pagination from "../../components/pagination/Pagination";
+import { Link } from "react-router-dom";
 
 const ProductPage = () => {
   return (
@@ -18,13 +21,11 @@ const ProductPage = () => {
           </div>
 
           <div className="mt-10">
-            <h2 className="text-[20px] font-semibold uppercase">Price</h2>
-            <div>
-                range
-            </div>
+            {/* <h2 className="text-[20px] font-semibold uppercase">Price</h2> */}
+                <PriceRangeSlider/>
           </div>
 
-          <div className="mt-10">
+          <div className="mt-16">
             <h2 className="text-[20px] font-semibold uppercase">Brand</h2>
             <ul className="mt-4 flex flex-col gap-y-2 text-sm">
               <li> <a href="">GAP</a> </li>
@@ -68,14 +69,16 @@ const ProductPage = () => {
           <div className="flex justify-center items-center">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-[45px] gap-y-8">
               {Array.from({ length: 9 }).map((item, i) => (
-                <div key={i}>
+                <Link to={`/products/${i+1}`} key={i}>
                   <ProductCard />
-                </div>
+                </Link>
               ))}
             </div>
           </div>
 
-          <div className="bg-red-300 h-[80px]">Pagination</div>
+          <div className="mt-20">
+            <Pagination/>
+          </div>
         </div>
       </div>
     </div>

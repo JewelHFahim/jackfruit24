@@ -6,6 +6,7 @@ import Admin from "../authentication/Admin";
 import Register from "../authentication/register/Register";
 import Login from "../authentication/Login";
 import ProductPage from "../pages/product-page/ProductPage";
+import ProductDetails from "../pages/product-page/ProductDetails";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <ProductPage />,
+      },
+      {
+        path: "/products/:id",
+        element: <ProductDetails />,
       },
     ],
   },

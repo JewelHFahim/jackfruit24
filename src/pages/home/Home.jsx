@@ -18,7 +18,7 @@ const Home = () => {
         </div>
       </div>
 
-      <hr className="mt-5 lg:mt-0 lg:my-10 border-[1.5px]" />
+      <hr className="mt-5 lg:mt-10 lg:my-10 border-[1.5px]" />
 
       <NewsLetter />
     </div>

@@ -53,7 +53,7 @@ const Footer = () => {
 
         <div className="hidden lg:block">
           <h1 className="text-[22px] font-medium text-white uppercase">
-            Cagories
+            Categories
           </h1>
           <ul className="mt-4 text-sm font-medium flex flex-col gap-y-3 text-slate-800">
             <li>
