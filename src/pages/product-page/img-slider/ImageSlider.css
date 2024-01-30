@@ -1,0 +1,23 @@
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+  height: 600px;
+  object-fit: cover;
+}
+
+.image-gallery-thumbnail .image-gallery-thumbnail-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.image-gallery-left-nav .image-gallery-svg,
+.image-gallery-right-nav .image-gallery-svg {
+  height: 50px;
+  width: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .image-gallery-content .image-gallery-slide .image-gallery-image {
+    height: 100%;
+    object-fit: cover;
+  }
+}

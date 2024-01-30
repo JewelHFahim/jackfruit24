@@ -31,7 +31,7 @@ const MobileMenu = () => {
 
           <ul className="text-white  flex flex-col gap-y-5 w-full">
             <li className={btnStyle}><a href="#!">Home</a></li>
-            <li className={btnStyle}><a href="#!">Womens</a></li>
+            <li className={btnStyle}><a href="/products">Womens</a></li>
             <li className={btnStyle}><a href="#!">Mens</a></li>
           </ul>
 
