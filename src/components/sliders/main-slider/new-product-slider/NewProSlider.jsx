@@ -5,8 +5,11 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "./NewProSlider.css";
 import NewPCard from "./NewPCard";
+import { useProductListQuery } from "../../../../redux/features/products/productApi";
+import { Link } from "react-router-dom";
 
 export default function NewProSlider() {
+  const { data: products } = useProductListQuery();
 
 
   return (
@@ -38,11 +41,11 @@ export default function NewProSlider() {
           modules={[Autoplay, Pagination, Navigation]}
           className="newProductSlider pt-8 pb-16 lg:pt-[50px] lg:pb-[70px] pl-8 lg:pl-0"
         >
-          {Array.from({ length: 9 }).map((item, i) => (
+          {products?.slice(0,9)?.map((product, i) => (
             <SwiperSlide key={i}>
-              <div>
-                <NewPCard />
-              </div>
+              <Link to={`/products/${product?.id}`}>
+                <NewPCard product={product}/>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>

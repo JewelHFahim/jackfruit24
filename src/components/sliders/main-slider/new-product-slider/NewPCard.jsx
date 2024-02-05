@@ -4,7 +4,7 @@ import { FaArrowRightArrowLeft } from "react-icons/fa6";
 import { ImEye } from "react-icons/im";
 import "./NewPCard.css";
 
-const NewPCard = () => {
+const NewPCard = ({product}) => {
   const actionBtnStyle =
     "w-[35px] h-[35px] rounded-full flex justify-center items-center hover:bg-slate-200 hover:text-red-600 transition-all duration-200";
 
@@ -12,17 +12,17 @@ const NewPCard = () => {
     <div className="w-[260px] h-[380px] bg-white flex flex-col productcard hover:border-[3px] border-transparent hover:border-red-600 shadow-md">
       <div className="h-1/2">
         <img
-          src="https://onion24.com/product_images/1702208108_1.jpg"
+          src={product?.image}
           alt=""
           className="w-full h-full"
         />
       </div>
 
       <div className="h-1/2 w-full flex flex-col justify-center items-center bg-white z-[99]">
-        <p className="uppercase font-thin text-sm">Ladies Wears</p>
-        <p className="uppercase font-medium mt-1">Formal Looks</p>
+        <p className="uppercase font-thin text-sm">{product?.category}</p>
+        <p className="uppercase font-medium mt-1 text-center">{ product?.title?.length <= 35 ? product?.title : product?.title?.slice(0, 35) }</p>
         <p className="text-[20px] font-bold text-red-700 mt-1">
-          99
+          {product?.price}
           <span className="text-[16px] font-normal text-slate-700 line-through">
             $110.00
           </span>

@@ -7,6 +7,8 @@ import Register from "../authentication/register/Register";
 import Login from "../authentication/Login";
 import ProductPage from "../pages/product-page/ProductPage";
 import ProductDetails from "../pages/product-page/ProductDetails";
+import Cart from "../pages/cart/Cart";
+import WishList from "../pages/wishlist/WishList";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
       {
         path: "/products/:id",
         element: <ProductDetails />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+      {
+        path: "/wishlist",
+        element: <WishList />,
       },
     ],
   },

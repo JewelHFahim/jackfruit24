@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "title": "RED LADIES DRESS",
+        "category": "LADIES WEARS",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "price": 500,
+        "prev_price": 800,
+        "img": "https://onion24.com/product_images/1702207467_red%20dress.jpg",
+        "images": [
+            "https://onion24.com/product_images/1702207467_red%20dress.jpg",
+            "https://onion24.com/product_images/1702207467_red%20dress.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "LADIES CASUAL CLOTHS",
+        "category": "LADIES WEARS",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "price": 450,
+        "prev_price": 6000,
+        "img": "https://onion24.com/product_images/1702208060_2.jpg",
+        "images": [
+            "https://onion24.com/product_images/1702208060_2.jpg",
+            "https://onion24.com/product_images/1702208060_2.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "LADIES CASUAL CLOTHS",
+        "category": "LADIES WEARS",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "price": 450,
+        "prev_price": 6000,
+        "img": "https://onion24.com/product_images/1702208060_2.jpg",
+        "images": [
+            "https://onion24.com/product_images/1702208060_2.jpg",
+            "https://onion24.com/product_images/1702208060_2.jpg"
+        ]
+    }
+]

@@ -1,9 +1,18 @@
 import { useState } from "react";
 import ImageSlider from "./img-slider/ImageSlider";
 import Buttons from "../../utils/Buttons";
+import { useGetSingleProductQuery } from "../../redux/features/products/productApi";
+import { useParams } from "react-router-dom";
+import toast from "react-hot-toast";
+import { addTocart } from "../../redux/features/cart/cartSlice";
+import { useDispatch } from "react-redux";
 
 const ProductDetails = () => {
+  const { id } = useParams();
   const [active, setActive] = useState("description");
+  const { data: productDetails } = useGetSingleProductQuery(id);
+  const dispatch = useDispatch();
+
 
   const handleActive = (state) => {
     setActive(state);
@@ -14,7 +23,7 @@ const ProductDetails = () => {
       <div className="max-w-6xl px-4 py-4 mx-auto lg:py-6 md:px-6">
         <div className="flex flex-wrap -mx-4">
           <div className="w-full px-4 md:w-1/2 ">
-            <ImageSlider />
+            <ImageSlider productDetails={productDetails} />
           </div>
 
           <div className="w-full px-4 md:w-1/2">
@@ -24,8 +33,7 @@ const ProductDetails = () => {
                   New
                 </span>
                 <h2 className="max-w-xl mt-2 mb-6 text-xl font-bold md:text-3xl">
-                  {" "}
-                  RED LADIES DRESS{" "}
+                 {productDetails?.title}
                 </h2>
                 <div className="flex items-center mb-6">
                   <ul className="flex mr-2">
@@ -90,15 +98,11 @@ const ProductDetails = () => {
                     (2 customer reviews)
                   </p>
                 </div>
-                <p className="max-w-md mb-6 text-gray-700">
-                  Lorem ispum dor amet Lorem ispum dor amet Lorem ispum dor amet
-                  Lorem ispum dor amet Lorem ispum dor amet Lorem ispum dor amet
-                  Lorem ispum dor amet Lorem ispum dor amet
-                </p>
+                <p className="max-w-md mb-6 text-gray-700"> {productDetails?.description} </p>
                 <p className="inline-block mb-3 text-2xl font-bold text-red-700">
-                  <span>$100.99</span>
+                  <span>${productDetails?.price}</span>
                   <span className="text-base font-normal text-gray-500 line-through">
-                    $150.99
+                    ${Number(productDetails?.price) + Number(productDetails?.price)*.15}
                   </span>
                 </p>
                 <p className="text-green-6700 dark:text-green-600">
@@ -160,7 +164,7 @@ const ProductDetails = () => {
 
               <div className="flex flex-wrap items-center -mx-4 ">
                 <div className="w-full px-4 mb-4 lg:w-1/2 lg:mb-0">
-                  <button className="flex items-center justify-center w-full p-2 text-white bg-red-700 border-2 rounded-[20px] hover:bg-white border-red-800 hover:text-red-800 font-semibold transition-all duration-200 ease-in-out">
+                  <button  onClick={()=>(dispatch(addTocart(productDetails)), toast.success("Added To Cart"))} className="flex items-center justify-center w-full p-2 text-white bg-red-700 border-2 rounded-[20px] hover:bg-white border-red-800 hover:text-red-800 font-semibold transition-all duration-200 ease-in-out">
                     Add to Cart
                   </button>
                 </div>
@@ -178,7 +182,7 @@ const ProductDetails = () => {
       <div className="mt-8 flex justify-center w-[75%] mx-auto">
         <section>
           <div className="flex justify-center items-center lg:gap-5">
-            <div className="h-[2px] w-full bg-red-600"/>
+            <div className="h-[2px] w-full bg-red-600" />
 
             <Buttons
               handleActive={handleActive}
@@ -203,7 +207,7 @@ const ProductDetails = () => {
             >
               Shipping & Returns
             </Buttons>
-            <div className="h-[2px] w-full bg-red-600"/>
+            <div className="h-[2px] w-full bg-red-600" />
           </div>
 
           <div>

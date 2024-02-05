@@ -3,8 +3,12 @@ import { FaRegHeart } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { Link } from "react-router-dom";
 import MobileMenu from "../mobile-menu/MobileMenu";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+
+  const {products} = useSelector(state => state.cart)
+
   return (
     <div className="bg-gradient-to-r from-blue-800 to-red-800 py-2 lg:py-3">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-y-4 lg:w-[1170px] mx-auto">
@@ -31,7 +35,7 @@ const Navbar = () => {
         </div>
 
         <div className="px-5 lg:px-0 w-ful min-w-full lg:min-w-max flex items-center justify-between lg:gap-x-6 mt-3 lg:mt-0">
-          <div className="flex flex-col items-center gap-x-1 text-white">
+          <Link to="/wishlist" className="flex flex-col items-center gap-x-1 text-white">
             <div className="relative">
               <FaRegHeart className="text-xl" />
               <div className="w-[15px] h-[15px] bg-red-600 rounded-full absolute top-[-10px] right-[-10px] flex justify-center items-center text-xs shadow-xl shadow-white">
@@ -39,18 +43,18 @@ const Navbar = () => {
               </div>
             </div>
             <p className="text-sm lg:block hidden">Your Wishlist</p>
-          </div>
+          </Link>
 
-          <div className="flex flex-col items-center gap-x-1 text-white">
+          <Link to="/cart" className="flex flex-col items-center gap-x-1 text-white">
             <div className="relative">
               <MdOutlineShoppingCart className="text-2xl" />
               <div className="w-[15px] h-[15px] bg-red-600 rounded-full absolute top-[-10px] right-[-10px] flex justify-center items-center text-xs shadow-xl shadow-white">
-                2
+                {products?.length}
               </div>
             </div>
 
             <p className="text-sm hidden lg:block ">Your Cart</p>
-          </div>
+          </Link>
 
           <div className="block lg:hidden mb-5">
             <MobileMenu />

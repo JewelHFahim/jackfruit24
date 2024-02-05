@@ -1,12 +1,12 @@
 .image-gallery-content .image-gallery-slide .image-gallery-image {
   height: 600px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .image-gallery-thumbnail .image-gallery-thumbnail-image {
   width: 100px;
   height: 100px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .image-gallery-left-nav .image-gallery-svg,
